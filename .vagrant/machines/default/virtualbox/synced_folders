@@ -1,1 +1,0 @@
-{"virtualbox":{"/home/ubuntu/app":{"guestpath":"/home/ubuntu/app","hostpath":"/Users/Richard/SpartaResources/Eng5-DevOps/vagrant/app","disabled":false,"__vagrantfile":true},"/vagrant":{"guestpath":"/vagrant","hostpath":"/Users/Richard/SpartaResources/Eng5-DevOps/vagrant","disabled":false,"__vagrantfile":true}}}
