@@ -4,10 +4,13 @@ var exec = require('child_process').exec;
 var mongoose = require('mongoose');
 var Post = require('./models/post');
 var AdvancedMaths = require('./modules/advanced-maths');
+var cors = require('cors');
 
 app.set('view engine' , 'ejs');
 
 app.use(express.static('public'));
+
+app.use(cors());
 
 app.get('/' , function(req , res){
   res.render("index");
@@ -23,6 +26,16 @@ if(process.env.DB_HOST) {
       })
   });
 }
+
+app.get("/api/posts" , function(req,res){
+    res.json([{
+      title: "Post 1",
+      body: "A blog post"
+    },{
+      title: "Post 2",
+      body: "Another blog post"
+    }]);
+  });
 
 app.get('/fibonacci/:n' , function(req,res){
 
